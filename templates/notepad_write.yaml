@@ -1,0 +1,27 @@
+{
+  "name": "notepad-write-demo",
+  "summary": "Open Notepad, write text, save to Desktop, then capture a screenshot.",
+  "actions": [
+    {
+      "name": "launch_app",
+      "description": "Launch Windows Notepad",
+      "params": {"application": "notepad"},
+      "expected_outcome": "Notepad window is focused"
+    },
+    {
+      "name": "type_text",
+      "description": "Type the provided text into the focused window",
+      "params": {"text": "Hello from the Bytebot MVP!"}
+    },
+    {
+      "name": "save_file",
+      "description": "Save the current document to the Desktop",
+      "params": {"directory": "Desktop", "filename": "bytebot-demo.txt"}
+    },
+    {
+      "name": "capture_screenshot",
+      "description": "Capture final screenshot for auditing",
+      "params": {}
+    }
+  ]
+}
